@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import Recaptcha from 'react-google-recaptcha'
 import Layout from '../layout'
 
-const RECAPTCHA_KEY1 = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
+const RECAPTCHA_KEY1 = process.env.SITE_RECAPTCHA_KEY
 const RECAPTCHA_KEY = "6LcfwqEaAAAAAAsopYYS3eDqx08Y6kGKbb49O5wu";
 if (typeof RECAPTCHA_KEY === 'undefined') { console.log("Error!")
   /* throw new Error(`
