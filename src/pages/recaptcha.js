@@ -26,6 +26,7 @@ export default function Contact() {
   const [buttonDisabled, setButtonDisabled] = React.useState(true);
 console.log(buttonDisabled);
   const [name, setName] = React.useState("");
+  const [value, setValue] = React.useState("");
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -35,7 +36,8 @@ console.log(buttonDisabled);
     e.preventDefault(
       )
       setButtonDisabled(true)
-    setName("")
+      setName("")
+      setValue("")
 
     const form = e.target
     const recaptchaValue = recaptchaRef.current.getValue()
