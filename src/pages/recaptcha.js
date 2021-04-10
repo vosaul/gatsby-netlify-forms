@@ -49,7 +49,7 @@ console.log(buttonDisabled);
       }),
     })
       .then(() =>     {
-        setButtonDisabled(false)
+        setButtonDisabled(true)
         }
 /* navigate(form.getAttribute('action')) */)
       .catch((error) => alert(error))
