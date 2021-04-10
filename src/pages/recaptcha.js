@@ -32,9 +32,10 @@ console.log(buttonDisabled);
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-        setButtonDisabled(true);
-      setName("");
+    e.preventDefault(
+      setButtonDisabled(true),
+    setName("")
+    )
 
     const form = e.target
     const recaptchaValue = recaptchaRef.current.getValue()
