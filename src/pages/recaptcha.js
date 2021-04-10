@@ -53,7 +53,7 @@ export default function Contact() {
       <form
         name="contact-recaptcha"
         method="post"
-        action="/thanks/"
+        //action="/thanks/"
         data-netlify="true"
         data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
