@@ -13,7 +13,7 @@ if (typeof RECAPTCHA_KEY === 'undefined') { console.log("Error!")
   Note this demo is specifically for Recaptcha v2
   `) */
 }
-
+console.log(process.env.SITE_RECAPTCHA_KEY);
 function encode(data) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
