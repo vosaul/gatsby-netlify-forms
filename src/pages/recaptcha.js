@@ -22,9 +22,9 @@ function encode(data) {
 
 export default function Contact() {
   const [state, setState] = React.useState({})
+  const recaptchaRef = React.createRef()
   const [buttonDisabled, setButtonDisabled] = React.useState(true);
 
-  const recaptchaRef = React.createRef()
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -32,6 +32,8 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+        setButtonDisabled(true);
+
     const form = e.target
     const recaptchaValue = recaptchaRef.current.getValue()
     fetch('/', {
@@ -43,7 +45,8 @@ export default function Contact() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() =>     setButtonDisabled(false)
+/* navigate(form.getAttribute('action')) */)
       .catch((error) => alert(error))
   }
 
