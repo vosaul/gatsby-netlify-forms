@@ -24,7 +24,7 @@ export default function Contact() {
   const [state, setState] = React.useState({})
   const recaptchaRef = React.createRef()
   const [buttonDisabled, setButtonDisabled] = React.useState(true);
-
+console.log(buttonDisabled);
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -91,7 +91,9 @@ export default function Contact() {
           onChange={() => setButtonDisabled(false)}
         />
         <p>
-          <button type="submit">Send</button>
+          <button type="submit" disabled={buttonDisabled}>
+            Send
+          </button>
         </p>
       </form>
     </Layout>
