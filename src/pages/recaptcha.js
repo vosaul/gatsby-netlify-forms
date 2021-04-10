@@ -35,9 +35,7 @@ console.log(buttonDisabled);
   const handleSubmit = (e) => {
     e.preventDefault(
       )
-      setButtonDisabled(true)
-      e.target.reset()
-
+      
     const form = e.target
     const recaptchaValue = recaptchaRef.current.getValue()
     fetch('/', {
@@ -51,10 +49,13 @@ console.log(buttonDisabled);
     })
       .then(() =>     {
         setButtonDisabled(true)
-              recaptchaRef.current.reset();
-        }
-/* navigate(form.getAttribute('action')) */)
+      }
+      /* navigate(form.getAttribute('action')) */)
       .catch((error) => alert(error))
+      
+      recaptchaRef.current.reset();
+      setButtonDisabled(true);
+      e.target.reset();
   }
 
   return (
