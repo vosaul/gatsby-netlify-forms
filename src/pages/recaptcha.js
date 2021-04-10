@@ -47,7 +47,10 @@ console.log(buttonDisabled);
         ...state,
       }),
     })
-      .then(() =>     setButtonDisabled(false)
+      .then(() =>     {
+        setButtonDisabled(false)
+        setName("")
+        }
 /* navigate(form.getAttribute('action')) */)
       .catch((error) => alert(error))
   }
