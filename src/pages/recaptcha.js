@@ -36,7 +36,7 @@ console.log(buttonDisabled);
     e.preventDefault(
       )
       setButtonDisabled(true)
-      setName("")
+      e.target.reset()
       setValue("")
 
     const form = e.target
