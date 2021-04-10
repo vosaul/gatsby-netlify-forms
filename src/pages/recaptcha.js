@@ -37,7 +37,6 @@ console.log(buttonDisabled);
       )
       setButtonDisabled(true)
       e.target.reset()
-      recaptchaRef.current.reset()
 
     const form = e.target
     const recaptchaValue = recaptchaRef.current.getValue()
@@ -52,6 +51,7 @@ console.log(buttonDisabled);
     })
       .then(() =>     {
         setButtonDisabled(true)
+              recaptchaRef.current.reset();
         }
 /* navigate(form.getAttribute('action')) */)
       .catch((error) => alert(error))
